@@ -1,0 +1,116 @@
+{
+	"overrides": [
+		{
+			"files": "**/*.+(ts|tsx)",
+			"extends": [
+				"eslint:recommended",
+				"plugin:@typescript-eslint/recommended",
+				"plugin:import/typescript",
+				"plugin:react/recommended",
+				"plugin:react/jsx-runtime",
+				"next",
+				"airbnb",
+				"airbnb/hooks",
+				"airbnb-typescript",
+				"plugin:prettier/recommended",
+				"plugin:jest/recommended",
+				"plugin:jest/style",
+				"plugin:cypress/recommended"
+			],
+			"plugins": [
+				"react-hooks",
+				"simple-import-sort",
+				"unused-imports"
+			],
+			"rules": {
+				"@typescript-eslint/no-explicit-any": "error",
+				"@typescript-eslint/no-shadow": "error",
+				"@typescript-eslint/no-unused-vars": [
+					"error",
+					{
+						"ignoreRestSiblings": true,
+						"varsIgnorePattern": "_+"
+					}
+				],
+				"@typescript-eslint/no-use-before-define": "error",
+				"consistent-return": "off",
+				"import/extensions": [
+					"error",
+					"ignorePackages",
+					{
+						"js": "never",
+						"jsx": "never",
+						"ts": "never",
+						"tsx": "never"
+					}
+				],
+				"jsx-quotes": [
+					"error",
+					"prefer-double"
+				],
+				"no-alert": "error",
+				"no-console": "error",
+				"no-restricted-globals": "error",
+				"no-shadow": "off",
+				"no-unused-vars": "off",
+				"no-use-before-define": "off",
+				"react/function-component-definition": [
+					"error",
+					{
+						"namedComponents": "arrow-function",
+						"unnamedComponents": "arrow-function"
+					}
+				],
+				"react/jsx-filename-extension": [
+					"error",
+					{
+						"extensions": [
+							".jsx",
+							".tsx"
+						]
+					}
+				],
+				"react/jsx-uses-react": "off",
+				"react/no-array-index-key": "error",
+				"react/prop-types": "off",
+				"react/react-in-jsx-scope": "off",
+				"simple-import-sort/exports": "error",
+				"simple-import-sort/imports": "error",
+				"unused-imports/no-unused-imports": "error"
+			},
+			"settings": {
+				"import/resolver": {
+					"typescript": {}
+				}
+			},
+			"parser": "@typescript-eslint/parser",
+			"parserOptions": {
+				"ecmaVersion": "latest",
+				"jsx": true,
+				"sourceType": "module",
+				"project": "./tsconfig.json",
+				"useJSXTextNode": true
+			}
+		},
+		{
+			"files": "**/*.+(js|jsx)",
+			"extends": [
+				"eslint:recommended",
+				"airbnb-base",
+				"plugin:prettier/recommended"
+			],
+			"rules": {
+				"consistent-return": "off",
+				"no-alert": "error",
+				"no-console": "error",
+				"no-restricted-globals": "error",
+				"no-use-before-define": "off"
+			},
+			"globals": {
+				"document": true,
+				"localStorage": true,
+				"window": true
+			}
+		}
+	]
+}

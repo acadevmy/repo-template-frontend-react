@@ -1,0 +1,67 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"esnext"
+		],
+		"allowJs": true,
+		"declaration": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noEmit": true,
+		"esModuleInterop": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"baseUrl": "./src",
+		"incremental": true,
+		"paths": {
+			"@e2e/*": [
+				"../e2e/*"
+			],
+			"@api/*": [
+				"api/*"
+			],
+			"@common/*": [
+				"common/*"
+			],
+			"@components/*": [
+				"components/*"
+			],
+			"@contexts/*": [
+				"contexts/*"
+			],
+			"@hooks/*": [
+				"hooks/*"
+			],
+			"@layouts/*": [
+				"layouts/*"
+			],
+			"@pages/*": [
+				"pages/*"
+			],
+			"@redux/*": [
+				"redux/*"
+			],
+			"@style/*": [
+				"style/*"
+			]
+		}
+	},
+	"include": [
+		"eslint/*",
+		"jest.config.js",
+		"next.config.js",
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}
